@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
             idCell.textContent = row.id;
             nameCell.textContent = row.name;
             ageCell.textContent = row.age;
-s
             // Create a delete button
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
@@ -39,15 +38,7 @@ s
           console.error('Error fetching data:', error);
         });
     }
-      connection.query(query, [id], (err, results) => {
-    if (err) {
-      console.error('Error deleting data:', err);
-      return res.status(500).send('Internal Server Error');
-    }
 
-    // Data deleted successfully
-    return res.status(200).send('Data deleted successfully');
-  });
     //currently not working
      function deleteRow(id) {
         // Make a DELETE request to the server endpoint

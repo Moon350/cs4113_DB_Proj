@@ -20,9 +20,9 @@ app.use(express.static('views'));
 //Make MySQL Database Connection
 const connection = mysql.createConnection({
 	host : 'localhost',
-	database : 'tables',
+	database : 'movie_database',
 	user : 'root',
-	password : 'sofia'
+	password : 'password'
 });
 
 // Connect to the MySQL database
@@ -72,8 +72,10 @@ app.post('/insertData', (req, res) => {
   });
 });
 
-app.post('/deleteData:id', (req, res) => { 
+app.delete('/deleteData/:id', (req, res) => { 
+  const id = req.params.id;
   const query = 'DELETE FROM users WHERE id = ?';
+  console.log(id);
   connection.query(query, [id], (err, results) => {
     if (err) {
       console.error('Error deleting data:', err);
@@ -81,7 +83,6 @@ app.post('/deleteData:id', (req, res) => {
     }
 
     // Data deleted successfully
-    res.redirect('views/index.html')
     return res.status(200).send('Data deleted successfully');
   });
 });

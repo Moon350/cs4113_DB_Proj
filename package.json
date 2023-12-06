@@ -1,7 +1,6 @@
 {
   "name": "4113_db_proj",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,5 +19,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofdogs/cs4113_DB_Proj.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sofdogs/cs4113_DB_Proj/issues"
+  },
+  "homepage": "https://github.com/sofdogs/cs4113_DB_Proj#readme",
+  "description": ""
 }
